@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="topbar">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true">LL</div>
+    <div>
+      <h1>Leonida Legend</h1>
+      <p class="tagline">The GTA VI trophy guide &amp; tracker — all 55 PlayStation 5 trophies, every guide cited.</p>
+    </div>
+  </div>
+  <div id="progress-panel">
+    <div id="progress-ring" role="img" aria-label="Trophy progress">
+      <span id="progress-count">0/55</span>
+    </div>
+    <div class="progress-meta">
+      <div id="progress-bar"><div id="progress-fill"></div></div>
+      <p id="progress-detail">0 earned · platinum hunt not started</p>
+      <p id="grade-counts" class="grade-counts"></p>
+    </div>
+  </div>
+</header>
+
+<nav id="toolbar" aria-label="Tracker controls">
+  <input id="search-box" type="search" placeholder="Search trophies, missions, places…" aria-label="Search trophies">
+  <div id="kind-filters" role="group" aria-label="Filter by kind">
+    <button data-kind="all" class="chip active">All 55</button>
+    <button data-kind="story" class="chip">Story</button>
+    <button data-kind="missable" class="chip chip-warn">Missable</button>
+    <button data-kind="collectibles" class="chip">Collectibles</button>
+    <button data-kind="activities" class="chip">Activities</button>
+    <button data-kind="online" class="chip">Online</button>
+  </div>
+  <label class="toggle"><input type="checkbox" id="spoiler-toggle"> Hide story spoilers</label>
+  <label class="toggle"><input type="checkbox" id="earned-toggle"> Earned only</label>
+  <div id="io-buttons">
+    <button id="export-btn" type="button">Export progress</button>
+    <button id="import-btn" type="button">Import</button>
+    <input id="import-file" type="file" accept="application/json" hidden>
+    <button id="reset-btn" type="button">Reset</button>
+  </div>
+</nav>
+
+<main id="layout">
+  <section id="list-column">
+    <section id="roadmap-panel" aria-label="Roadmap to the platinum">
+      <h2>Roadmap to the platinum</h2>
+      <p class="roadmap-intro">Five stages, built from the official trophy descriptions: story first (six trophies can be missed on the way), then the Leonida grind. Estimated 90–120 hours; difficulty 6/10 — the shooting-range golds and 250 stunts are the long poles.</p>
+      <ol id="roadmap-list"></ol>
+    </section>
+    <p id="list-status" role="status"></p>
+    <ul id="trophy-list"></ul>
+  </section>
+
+  <aside id="detail-panel" aria-label="Trophy guide">
+    <div id="detail-empty">
+      <h2>Pick a trophy</h2>
+      <p>Every card on the left opens its full guide here: what to do, where it happens, when it can be missed, and the sources the guide is built from — the official PlayStation list, the PSNProfiles trophy guide, the PowerPyx trophy guide &amp; roadmap, and the Exophase trophy list.</p>
+      <p>Progress is saved in this browser automatically. Export it before you switch machines.</p>
+    </div>
+    <article id="detail-card" hidden>
+      <p id="detail-grade"></p>
+      <h2 id="detail-name"></h2>
+      <p id="detail-desc"></p>
+      <p id="detail-flags"></p>
+      <h3>Guide</h3>
+      <p id="detail-guide"></p>
+      <h3>Roadmap stage</h3>
+      <p id="detail-stage"></p>
+      <h3>Sources</h3>
+      <p id="detail-sources"></p>
+      <button id="detail-toggle-earned" type="button">Mark as earned</button>
+    </article>
+  </aside>
+</main>
+
+<footer id="colophon">
+  <p>An unofficial fan guide. Trophy names and descriptions are as PlayStation publishes them; every guide is written for this page and cites its sources. No Rockstar Games artwork or logos — the look is our own.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
